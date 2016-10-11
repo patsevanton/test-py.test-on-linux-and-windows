@@ -15,7 +15,6 @@ def test__thread_works_in_background():
     _listy = []
     t1(_listx, y=_listy)
     sleep(times)
-    assert len(_listx) == times-1
-    assert len(_listy) == times-1
-
+    assert abs(len(_listx) - times) < 2
+    assert abs(len(_listy) - times) < 2
 
